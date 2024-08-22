@@ -10,9 +10,79 @@ body, div, h2, p{
 
 body {
 	background-color: #333;
-	color: #f0ffff;
+	color: #333;
 	font-family: sans-serif;
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.cards_container {
+	width: 60%;
+	margin: 50px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.card {
+	background-color: #333;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px #f0ffff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+}
+
+.card__icono {
+	font-size: 100px;
+	margin-bottom: 10px;
+}
+
+.card__text {
+	font-size: 16px;
+	width: 100%;
+	padding: 10px;
+	color: #f0ffff;
+	opacity: 0;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: opacity 0.3s ease;
+}
+
+.card:hover .card__text {
+	opacity: 1;
+}
+
+.card1 {
+	background-color: #43b0fd;
+}
+
+.card2 {
+	background-color: #ff7693;
+}
+
+.card3 {
+	background-color: #38db92;
+}
+
+.card4 {
+	background-color: #feb100;
+}
+
+.card5 {
+	background-color: #2eaa82;
+}
+
+.card6 {
+	background-color: #d86dfe;
 }
